@@ -1,0 +1,4 @@
+branch_name = subprocess.check_output('git branch --show-current').decode().strip()
+c_by = subprocess.check_output('git log -1 --pretty=format:"%cn"').decode().strip()
+c_date = subprocess.check_output('git log -1 --pretty=format:"%cd"').decode().strip()
+c_id = subprocess.check_output('git log -1 --pretty=format:"%H"').decode().strip()[:11]
